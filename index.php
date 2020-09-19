@@ -20,6 +20,8 @@ and open the template in the editor.
                 //VALIDANDO E-MAIL
                 $String ="contato@gmail.org";
                 $padrao="/^[a-z0-9.\-\_]+@[a-z0-9.\-\_]+\.(com|br|com.br)$/i";
+                $data="19/09/2020";
+                $datapadrao="/^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/";
                 //Ocorrências=> ?(0 ou 1 ocorrência); *(0,várias ocorrências), +(1 ou + ocorrências) 
                 
                 
@@ -74,7 +76,7 @@ and open the template in the editor.
                  
                  */
                 
-                if(preg_match($padrao, $String)):
+               if(preg_match($padrao, $String)):
                     echo 'Válido';
                     echo '<hr>';
                     echo $String;
@@ -82,6 +84,15 @@ and open the template in the editor.
                     echo 'inválido';
                     echo '<hr>';
                     
+                endif;
+                
+                if(preg_match($datapadrao, $data)):
+                    echo 'Data válida';
+                    echo '<hr>';
+                    echo $data;
+                else:
+                    echo 'inválido';
+                    echo '<hr>';
                 endif;
                 
                 ?>
