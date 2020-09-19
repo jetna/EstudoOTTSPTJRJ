@@ -19,7 +19,10 @@ and open the template in the editor.
                 
                 //VALIDANDO E-MAIL
                 $String ="contato@gmail.org";
-                $padrao="//"
+                $padrao="/^[a-z0-9.\-\_]+@[a-z0-9.\-\_]+\.(com|br|com.br)$/i";
+                //Ocorrências=> ?(0 ou 1 ocorrência); *(0,várias ocorrências), +(1 ou + ocorrências) 
+                
+                
                 
                 /*$String ="asdf";
                 $padrao="/^[a-z0-9]+$/"; //definir padrão 1. colocar entre as barras os operadores e caracteres
